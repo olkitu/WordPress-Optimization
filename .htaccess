@@ -31,18 +31,17 @@ Options -Indexes
 
 # Security Headers for Apache2
 <ifModule mod_headers.c>
-	Header always set Strict-Transport-Security "max-age=31536000; preload"
-	Header set X-Frame-Options "deny"
-	Header set X-XSS-Protection "1; mode=block" 
-	Header set Referrer-Policy "no-referrer-when-downgrade"
-	Header set X-Content-Type-Options "nosniff"
+  Header always set Strict-Transport-Security "max-age=31536000; preload"
+  Header set X-Frame-Options "deny"
+  Header set X-XSS-Protection "1; mode=block" 
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+  Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
 # HTTP2 Push Headers
 <IfModule http2_module>
-  # HTTP2
-	Header add Link "</wp-includes/js/jquery/jquery.js?ver=1.12.4>; rel=preload; as=script"
-	Header add Link "</wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1>; rel=preload; as=script"
+  Header add Link "</wp-includes/js/jquery/jquery.js?ver=1.12.4>; rel=preload; as=script"
+  Header add Link "</wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1>; rel=preload; as=script"
 </IfModule>
 
 # Expire Headers
@@ -71,9 +70,9 @@ Options -Indexes
   ExpiresByType application/x-javascript "access plus 6 month"
   ExpiresByType application/javascript "access plus 6 month"
 		  
-	ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
-	ExpiresByType application/x-font-ttf "access plus 1 year"
-	ExpiresByType application/x-font-opentype "access plus 1 year"
-	ExpiresByType application/x-font-woff "access plus 1 year"
-	ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType application/x-font-ttf "access plus 1 year"
+  ExpiresByType application/x-font-opentype "access plus 1 year"
+  ExpiresByType application/x-font-woff "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
